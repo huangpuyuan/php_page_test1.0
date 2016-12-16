@@ -64,8 +64,7 @@ switch($ac){
 			      $mes='移除失败';
 		       }
 			   $url='position.php';
-			 echo "<script type='text/javascript'>
-		         alert('{$mes}');
+			 echo "<script type='text/javascript'>		        
 			     location.href='{$url}';      
 		         </script>";
 		      exit;	
@@ -80,8 +79,7 @@ switch($ac){
 			      $mes='移除失败';
 		       }
 			   $url='position.php';
-			   echo "<script type='text/javascript'>
-		            alert('{$mes}');
+			   echo "<script type='text/javascript'>		           
 			   	    location.href='{$url}';      
 		            </script>";
 		      exit;	

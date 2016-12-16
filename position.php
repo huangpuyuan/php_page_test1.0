@@ -3,7 +3,7 @@ header('content-type:text/html;charset=utf-8');
 include_once('sqlite.php');
 $ac=(isset($_GET['ac']))?$_GET['ac']:'';
 $id=(isset($_GET['id']))?$_GET['id']:'';
-$p=(isset($_GET['p']))?$_GET['p']:'';
+
 $DB=new SQLite( 'data_source_listnew.db' );
 $sql="select * from list_source where spare01 = 1 order by id desc";
 $data=$DB->getlist($sql);
@@ -20,7 +20,7 @@ $banner="";
 </head>
 
 <body>
-<p>固定位视频展示|<a href="page.php?p=<?php echo $p;?>">添加固定位</a></p>
+<p>固定位视频展示|<a href="page.php">添加固定位</a></p>
 <table border=1 cellspacing="0" width=72% >
     <tr bgcolor="#ABCDEF">
     <td>序号</td>
@@ -43,8 +43,8 @@ $banner="";
     <?php $num++;endforeach;?>
 </table>
 
-<p><a href="page.php">返回展示页首页</a></p>
-<p>推荐位视频展示|<a href="page.php?p=<?php echo $p;?>">添加推荐位</a></p>
+<p><a href="page.php">返回展示页</a></p>
+<p>推荐位视频展示|<a href="page.php">添加推荐位<a></p>
 <table border=1 cellspacing="0" width=60% >
     <tr bgcolor="#ABCDEF">
     <td>序号</td>
@@ -61,6 +61,6 @@ $banner="";
     </tr>
     <?php $no++;endforeach;?>
 </table>
-<p><a href="page.php">返回展示页首页</a></p>
+<p><a href="page.php">返回展示页</a></p>
 </body>
 </html>
